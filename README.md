@@ -1,2 +1,2 @@
-Django course repo
-------------------
+Django university course repository
+-----------------------------------
