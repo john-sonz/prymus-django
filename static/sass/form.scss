@@ -1,0 +1,22 @@
+html{
+    background-color: grey;
+}
+
+label{
+    font-weight: bold;
+
+    &:hover{
+        color: lime;
+        cursor: pointer;
+    }
+}
+
+button{
+    &[type="submit"]{
+        background-color: green;
+    }
+    &[type="reset"]{
+        background-color: red;
+    }
+}
+

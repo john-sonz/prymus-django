@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+
+.cont {
+  height: 100%;
+}
+
+.left {
+  height: 100%;
+  width: 30%;
+  padding: 10px;
+  min-width: 300px;
+  float: left;
+  background-color: lightgreen;
+}
+
+.right {
+  height: 100%;
+  width: 70%;
+  min-width: 300px;
+  padding: 10px;
+  float: left;
+  background-color: lightgoldenrodyellow;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,21 @@
+html {
+  background-color: grey;
+}
+
+label {
+  font-weight: bold;
+}
+
+label:hover {
+  color: lime;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: green;
+}
+
+button[type="reset"] {
+  background-color: red;
+}
+/*# sourceMappingURL=form.css.map */

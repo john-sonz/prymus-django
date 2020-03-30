@@ -1,0 +1,10 @@
+{
+    "liveServer.settings.root": "/static",
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/static/css/"
+        }
+    ]
+}
