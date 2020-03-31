@@ -7,20 +7,9 @@ html, body{
     height: 100%;
 }
 
-.left{
+.main{
     height: 100%;
-    width: 30%;
+    width: 100%;
     padding: 10px;
-    min-width: 300px;
-    float: left;
-    background-color: lightgreen;
-}
-
-.right{
-    height: 100%;
-    width: 70%;
-    min-width: 300px;
-    padding: 10px;
-    float: left;
     background-color: lightgoldenrodyellow;
 }
