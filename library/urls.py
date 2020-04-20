@@ -18,6 +18,7 @@ from django.urls import path
 from books import views
 
 urlpatterns = [
-    path('', views.hello_world),
+    path('', views.index),
+    path('form/', views.form),
     path('admin/', admin.site.urls),
 ]
