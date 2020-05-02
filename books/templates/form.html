@@ -1,14 +1,13 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularz</title>
+
+{% block styles %}
     <link rel="stylesheet" href="{% static 'css/form.css'%}" type="text/css">
-</head>
-<body>
+{% endblock styles %}
+
+{% block content %}
+
     <h1>Biblioteka</h1>
     <h3>Dodawanie nowej książki</h3>
 
@@ -41,6 +40,4 @@
         <button type="submit">Wyślij</button>
     </form>
 
-
-</body>
-</html>
+{% endblock content %}

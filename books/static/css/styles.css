@@ -1,0 +1,14 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+
+.cont {
+  height: 100%;
+  background-color: lightgoldenrodyellow;
+}
+
+.main {
+  padding: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
