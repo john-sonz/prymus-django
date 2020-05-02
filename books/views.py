@@ -16,4 +16,13 @@ def book_list(request):
         "books": books
     }
 
-    return render(request, template_name="books.html", context=context)
+    return render(request, "books.html", context)
+
+def book_detail(request, book_id):
+    book = Book.objects.get(id=book_id)
+
+    context = {
+        "book": book
+    }
+
+    return render(request, "book_detail.html", context)
