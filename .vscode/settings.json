@@ -6,8 +6,7 @@
             "savePath": "/books/static/sources/css/"
         }
     ],
-    "python.pythonPath": "e:\\projekty\\django-library\\venv\\Scripts\\python.exe",
-    "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
+    "python.pythonPath": "z:\\projekty\\django-library\\venv\\Scripts\\python.exe",
     "files.associations": {
         "**/*.html": "html",
         "**/templates/**/*.html": "django-html",
