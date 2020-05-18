@@ -1,18 +1,31 @@
 {
-    "liveSassCompile.settings.formats": [
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": "/books/static/sources/css/"
-        }
-    ],
-    "python.pythonPath": "e:\\projekty\\django-library\\venv\\Scripts\\python.exe",
+    "liveSassCompile.settings.formats": [{
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/books/static/sources/css/"
+    }],
+    "editor.formatOnSave": true,
+    "python.pythonPath": "${workspaceFolder}/venv/Scripts/python.exe",
+    "python.linting.pylintPath": "pylint",
+    "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
+    "python.linting.pycodestyleArgs": ["--ignore=E501"],
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/**/*"
+    ],
+    "python.jediEnabled": false,
+    "python.autoComplete.addBrackets": true,
+
+    "files.exclude": {
+        "**/*.pyc": true
+    },
     "files.associations": {
         "**/*.html": "html",
         "**/templates/**/*.html": "django-html",
         "**/templates/**/*": "django-txt",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
-    "emmet.includeLanguages": {"django-html": "html"},
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
 }
