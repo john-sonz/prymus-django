@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Hello {{ request.user }}!</h1>
+<p>Last logged in at {{ request.user.last_login }}</p>
+
+{% endblock content %}

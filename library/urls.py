@@ -19,6 +19,9 @@ from books import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/profile/', views.user_profile, name='user_profile'),
+    path('accounts/signup/', views.user_signup, name="user_signup"),
     path('form/', views.form, name='form'),
     path('admin/', admin.site.urls),
     path('books/', include('books.urls'))

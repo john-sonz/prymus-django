@@ -4,7 +4,7 @@
         <span style="color: gray">
             <i class="fas fa-book fa-lg"></i>
         </span>
-        Biblioteka
+        Library
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,16 +13,32 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'form' %}">Formularz</a>
+                <a class="nav-link" href="{% url 'form' %}">Form</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="{% url 'books:list' %}">Książki</a> 
+                <a class="nav-link " href="{% url 'books:list' %}">Books</a>
             </li>
+
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'user_profile' %}">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'logout' %}">Log out</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'login' %}">Log in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'user_signup' %}">Sign up</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 
     <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Szukaj" aria-label="Search">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search fa-lg"></i></button>
     </form>
 </nav>
