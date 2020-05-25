@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Authors</h2>
+    {% for author in author_list %}
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{author.first_name}} {{author.last_name}}</h4>
+                <p class="card-text">{{author.about}}</p>
+            </div>
+        </div>
+
+    {% endfor %}
+{% endblock content %}

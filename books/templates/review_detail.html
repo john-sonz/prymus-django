@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4 >{{review.author}} about {{review.book.title}}</h4>
+<p >Recommended?
+{% if review.is_recommended %}
+    <span style="color: green"><i class="fas fa-check-circle"></i></span>
+    {% else %}
+    <span style="color: red"><i class="far fa-times-circle"></i></span>
+{% endif %}</p>
+<p>{{review.content}}</p>
+
+{% endblock content %}

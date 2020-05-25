@@ -1,9 +1,9 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import DetailView, ListView
 
-from books.models import Book
+from books.models import Author, Book, Review
 
 
 def index(request):
@@ -38,9 +38,21 @@ class BookListView(ListView):
     template_name = "book_list.html"
 
 
-def book_detail(request, book_id):
-    book = Book.objects.get(id=book_id)
+class BookDetailView(DetailView):
+    model = Book
+    template_name = "book_detail.html"
 
-    context = {"book": book}
 
-    return render(request, "book_detail.html", context)
+class AuthorListView(ListView):
+    model = Author
+    template_name = "author_list.html"
+
+
+class ReviewListView(ListView):
+    model = Review
+    template_name = "review_list.html"
+
+
+class ReviewDetailView(DetailView):
+    model = Review
+    template_name = "review_detail.html"
