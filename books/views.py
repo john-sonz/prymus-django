@@ -1,6 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic import ListView
 
 from books.models import Book
 
@@ -32,12 +33,9 @@ def user_signup(request):
                   context={'form': form})
 
 
-def book_list(request):
-    books = Book.objects.all()
-
-    context = {"books": books}
-
-    return render(request, "books.html", context)
+class BookListView(ListView):
+    model = Book
+    template_name = "book_list.html"
 
 
 def book_detail(request, book_id):
