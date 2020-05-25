@@ -31,3 +31,16 @@ class Author(models.Model):
 
     def __str__(self):
         return f'Author: {self.first_name} {self.last_name}'
+
+
+class Review(models.Model):
+    book = models.ForeignKey(to=Book,
+                             verbose_name="reviewed book",
+                             on_delete=models.CASCADE)
+    author = models.CharField(verbose_name="review author", max_length=250)
+    content = models.TextField(verbose_name="review content")
+    is_recommended = models.BooleanField(verbose_name="I recommend this book")
+
+    class Meta:
+        verbose_name = "review"
+        verbose_name_plural = "reviews"
