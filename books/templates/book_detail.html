@@ -3,7 +3,7 @@
 {% block content %}
 
     <h2>{{book.title}}</h2>
-    <h5>{{book.author}}</h5>
+    <h5>{{book.author.all|join:', '}}</h5>
     <p>Published at {{book.published_at}}</p>
     <p>{{book.short_description}}</p>
 
