@@ -1,9 +1,10 @@
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.generic import DetailView, FormView, ListView
+from django.views.generic import DetailView, CreateView, FormView, ListView
 
-from books.forms import SimpleForm
+from books.forms import SimpleForm, BookForm
 from books.models import Author, Book, Review
 
 
@@ -62,3 +63,8 @@ class SimpleFormView(FormView):
     def form_valid(self, form):
         ctx = {"name": form.cleaned_data["name"]}
         return render(self.request, "books/simple_form_success.html", ctx)
+
+
+class BookCreateView(LoginRequiredMixin, CreateView):
+    form_class = BookForm
+    template_name = "books/create_book_form.html"
